@@ -1,0 +1,24 @@
+/* Shared look for every page on bochoapps.com. */
+:root { --bg: #ffffff; --fg: #1b1d22; --muted: #5d626d; --line: #e3e5ea; --card: #f4f5f7; --accent: #e8304c; }
+@media (prefers-color-scheme: dark) { :root { --bg: #111318; --fg: #eceef2; --muted: #a3a8b3; --line: #2a2d35; --card: #1b1e25; --accent: #ff3d5a; } }
+/* Each app page sets its own accent color with a class on <body>. */
+.touchit { --accent: #e8304c; }
+.wallpaperheaven { --accent: #5b6cff; }
+@media (prefers-color-scheme: dark) { .touchit { --accent: #ff3d5a; } .wallpaperheaven { --accent: #8b97ff; } }
+
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+nav { font-size: .95rem; margin-bottom: 32px; }
+nav a { text-decoration: none; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h1 span, h2.app { color: var(--accent); }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+ul, ol { padding-left: 20px; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+.lead { font-size: 1.1rem; }
+.card { display: block; background: var(--card); border-radius: 16px; padding: 20px; margin-top: 20px; color: var(--fg); text-decoration: none; }
+.card h2 { margin: 0 0 4px; }
+.card p { margin: 0; }
+.links { margin-top: 24px; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }

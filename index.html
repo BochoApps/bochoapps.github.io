@@ -4,27 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BochoApps</title>
-<style>
- :root { --bg: #ffffff; --fg: #1b1d22; --muted: #5d626d; --accent: #e8304c; --card: #f4f5f7; }
- @media (prefers-color-scheme: dark) { :root { --bg: #111318; --fg: #eceef2; --muted: #a3a8b3; --accent: #ff3d5a; --card: #1b1e25; } }
- body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
- main { max-width: 720px; margin: 0 auto; padding: 56px 16px; }
- h1 { font-size: 2.2rem; margin: 0; }
- .muted { color: var(--muted); }
- .app { background: var(--card); border-radius: 16px; padding: 20px; margin-top: 32px; }
- .app h2 { margin: 0 0 4px; color: var(--accent); }
- a { color: var(--accent); }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
- <h1>BochoApps</h1>
- <p class="muted">Small, simple games for Android.</p>
- <section class="app">
-  <h2>TouchIT</h2>
-  <p>Put your finger on the button and don't let go. Play alone, with up to 8 friends on one phone, or against the world on the online leaderboard.</p>
-  <p><a href="touchit/privacy.html">Privacy policy</a> · <a href="touchit/delete-account.html">Delete your account</a></p>
- </section>
+<h1>BochoApps</h1>
+<p class="muted lead">Small, simple apps and games for Android.</p>
+
+<a class="card touchit" href="touchit/">
+ <h2 class="app">TouchIT</h2>
+ <p>Put your finger on the button and don't let go. Play alone, with up to 8 friends on one phone, or against the world on the online leaderboard.</p>
+</a>
+
+<a class="card wallpaperheaven" href="wallpaperheaven/">
+ <h2 class="app">Wallpaper Heaven</h2>
+ <p>Find wallpapers from Wallhaven, Wikimedia Commons and NASA, see them the way they'll look on your phone, and change your wallpaper on a schedule.</p>
+</a>
+
+<footer>© 2026 BochoApps · <a href="mailto:support@bochoapps.com">support@bochoapps.com</a></footer>
 </main>
 </body>
 </html>
