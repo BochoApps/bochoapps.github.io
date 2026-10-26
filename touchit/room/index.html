@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join my TouchIT room</title>
+<meta name="description" content="A friend invited you to an online TouchIT room: whoever holds the button longest wins.">
+<link rel="stylesheet" href="../../style.css">
+<style>
+ .code { font: 700 1.8rem/1.2 ui-monospace, "SFMono-Regular", Menlo, monospace; letter-spacing: .08em; margin: 8px 0 20px; }
+ .button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+   padding: 14px 22px; border-radius: 999px; margin: 6px 8px 6px 0; }
+ .button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+ #invalid { display: none; }
+</style>
+</head>
+<body class="touchit">
+<main>
+<nav><a href="../">← TouchIT</a></nav>
+<div id="invite">
+ <h1>Join my <span>TouchIT</span> room</h1>
+ <p class="lead">Everyone holds their own button on their own phone. The round starts when all of you are holding, and whoever lets go last wins.</p>
+ <p class="muted">Room code</p>
+ <p class="code" id="code"></p>
+ <p>
+  <a class="button" id="open" href="#">Open in TouchIT</a>
+  <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.bochoapps.touchit">Get TouchIT</a>
+ </p>
+ <h2>How to join</h2>
+ <ol>
+  <li>Install TouchIT and sign in with Google from the menu.</li>
+  <li>Open this link again, or tap <strong>Open in TouchIT</strong>, and join.</li>
+  <li>Or type the code yourself: Multiplayer → Online → Join.</li>
+ </ol>
+</div>
+<div id="invalid">
+ <h1>This room link isn't valid</h1>
+ <p>Ask your friend to share their room link again. <a href="../">About TouchIT</a></p>
+</div>
+<footer>© 2026 BochoApps · <a href="../privacy.html">Privacy policy</a></footer>
+</main>
+<script>
+ // Room codes are 6 characters without 0, O, 1, I or L. Anything else is shown as an invalid link, never inserted as HTML.
+ const code = (new URLSearchParams(location.search).get("c") || "").toUpperCase();
+ if (/^[2-9A-HJ-NP-Z]{6}$/.test(code)) {
+   document.getElementById("code").textContent = code;
+   // Opens the app when it's installed (Chrome-based browsers), otherwise its Play Store page.
+   document.getElementById("open").href = "intent://room?c=" + code +
+     "#Intent;scheme=touchit;package=com.bochoapps.touchit;end";
+ } else {
+   document.getElementById("invite").style.display = "none";
+   document.getElementById("invalid").style.display = "block";
+ }
+</script>
+</body>
+</html>
