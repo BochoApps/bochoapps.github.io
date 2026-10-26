@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bochoapps.touchit",
+      "sha256_cert_fingerprints": [
+        "78:B4:0B:C5:9B:B9:AF:AD:E4:EB:32:15:41:DD:C3:70:6F:66:FC:5E:2D:B2:4D:D7:5D:28:1D:22:16:47:28:BA"
+      ]
+    }
+  }
+]
