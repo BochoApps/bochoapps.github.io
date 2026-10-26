@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A TouchIT challenge</title>
+<meta name="description" content="A friend challenges you to hold the button longer than them on TouchIT.">
+<link rel="stylesheet" href="../../style.css">
+<style>
+ .time { font: 700 2.4rem/1.2 ui-monospace, "SFMono-Regular", Menlo, monospace; margin: 4px 0 20px; color: var(--accent); }
+ .button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+   padding: 14px 22px; border-radius: 999px; margin: 6px 8px 6px 0; }
+ .button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+ #invalid { display: none; }
+</style>
+</head>
+<body class="touchit">
+<main>
+<nav><a href="../">← TouchIT</a></nav>
+<div id="invite">
+ <h1>⚔️ You've been <span>challenged</span></h1>
+ <p class="lead"><strong id="who">A friend</strong> challenges you to hold the button longer than this:</p>
+ <p class="time" id="time">…</p>
+ <p>
+  <a class="button" id="open" href="#">Accept in TouchIT</a>
+  <a class="button secondary" href="https://play.google.com/store/apps/details?id=com.bochoapps.touchit">Get TouchIT</a>
+ </p>
+ <h2>How it works</h2>
+ <ol>
+  <li>Install TouchIT and open this link again, or tap <strong>Accept in TouchIT</strong>.</li>
+  <li>Put your finger on the button and don't let go. Last longer than the time above to win.</li>
+  <li>Sign in with Google so your friend finds out when you beat it.</li>
+ </ol>
+</div>
+<div id="invalid">
+ <h1>This challenge link isn't valid</h1>
+ <p>Ask your friend to share their challenge again. <a href="../">About TouchIT</a></p>
+</div>
+<footer>© 2026 BochoApps · <a href="../privacy.html">Privacy policy</a></footer>
+</main>
+<script>
+ // Challenge codes are 8 characters without 0, O, 1, I or L. Anything else is shown as an invalid link.
+ const code = (new URLSearchParams(location.search).get("c") || "").toUpperCase();
+ const invalid = () => {
+   document.getElementById("invite").style.display = "none";
+   document.getElementById("invalid").style.display = "block";
+ };
+ // "1:03.172" or "12.345 s", like the app.
+ const format = ms => {
+   const m = Math.floor(ms / 60000), s = Math.floor(ms / 1000) % 60, r = String(ms % 1000).padStart(3, "0");
+   return m > 0 ? `${m}:${String(s).padStart(2, "0")}.${r}` : `${s}.${r} s`;
+ };
+ if (/^[2-9A-HJ-NP-Z]{8}$/.test(code)) {
+   // Opens the app when it's installed (Chrome-based browsers), otherwise its Play Store page.
+   document.getElementById("open").href = "intent://challenge?c=" + code + "#Intent;scheme=touchit;package=com.bochoapps.touchit;end";
+   // The challenge itself, from TouchIT's server. The key is the public one the app also ships with.
+   const key = "sb_publishable_rGadqa5E8n5vxa46RUL5dw_2mYY-OoS";
+   fetch("https://jjmmdnghfkrssngirudt.supabase.co/rest/v1/rpc/get_challenge", {
+     method: "POST",
+     headers: { "apikey": key, "Content-Type": "application/json" },
+     body: JSON.stringify({ p_code: code }),
+   }).then(r => r.json()).then(rows => {
+     const c = Array.isArray(rows) ? rows[0] : null;
+     if (!c) return invalid();
+     // Shown as text, never as HTML: nicknames come from players.
+     document.getElementById("who").textContent = c.nickname + (c.tag ? "#" + c.tag : "");
+     document.getElementById("time").textContent = format(c.time_ms);
+   }).catch(() => { document.getElementById("time").textContent = "?"; });
+ } else invalid();
+</script>
+</body>
+</html>
