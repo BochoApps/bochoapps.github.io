@@ -7,7 +7,8 @@
       "namespace": "android_app",
       "package_name": "com.bochoapps.touchit",
       "sha256_cert_fingerprints": [
-        "78:B4:0B:C5:9B:B9:AF:AD:E4:EB:32:15:41:DD:C3:70:6F:66:FC:5E:2D:B2:4D:D7:5D:28:1D:22:16:47:28:BA"
+        "78:B4:0B:C5:9B:B9:AF:AD:E4:EB:32:15:41:DD:C3:70:6F:66:FC:5E:2D:B2:4D:D7:5D:28:1D:22:16:47:28:BA",
+        "B0:1F:6C:CC:0C:4F:E5:63:0E:00:0C:A9:E6:5F:5B:DB:15:9B:96:3A:EE:CD:C1:E3:8E:52:47:99:08:5E:6E:0F"
       ]
     }
   }
