@@ -69,7 +69,9 @@ main > .site-header { padding-top: 0; }
 .apphead .lead { margin: 4px 0 16px; }
 .badge { display: inline-flex; align-items: center; gap: 10px; background: #111; color: #fff; border: 1px solid #333; border-radius: 10px; padding: 7px 16px 7px 12px; font-size: .7rem; line-height: 1.2; letter-spacing: .03em; text-decoration: none; }
 .badge svg { width: 22px; height: 22px; flex: none; }
+.badge small { display: block; font-size: inherit; text-transform: uppercase; }
 .badge b { display: block; font-size: 1.05rem; letter-spacing: 0; }
+a.badge:hover { background: #000; border-color: #555; }
 .chips { margin: 22px 0 0; padding: 0; list-style: none; display: flex; gap: 8px; flex-wrap: wrap; }
 .chips li { margin: 0; font-size: .85rem; font-weight: 700; background: var(--card); border: 1px solid var(--line); border-radius: 99px; padding: 4px 12px; color: var(--muted); }
 .shots { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 20px; max-width: 868px; margin: 0 auto; padding: 28px 20px 12px; }
