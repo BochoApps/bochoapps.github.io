@@ -48,7 +48,7 @@ main > .site-header { padding-top: 0; }
 .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .appcard { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; color: var(--fg); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
 .appcard:hover { transform: translateY(-3px); box-shadow: 0 12px 32px var(--shadow); }
-.appcard .fg { width: 100%; height: auto; display: block; aspect-ratio: 1024 / 500; object-fit: cover; }
+.appcard .fg { width: 100%; height: auto; display: block; aspect-ratio: 1200 / 627; object-fit: cover; }
 .appcard .body { padding: 18px 20px 22px; display: flex; gap: 14px; align-items: flex-start; }
 .appcard .body img { width: 52px; height: 52px; border-radius: 14px; flex: none; }
 .appcard h2 { margin: 0 0 4px; font-size: 1.2rem; }
