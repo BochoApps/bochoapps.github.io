@@ -3,17 +3,19 @@
 
 :root {
   --bg: #fffaf6; --fg: #2a211e; --muted: #6f6560; --line: #efe4dc; --card: #ffffff;
-  --brand: #f0645a; --accent: #f0645a; --tint: #fff1e6; --shadow: rgba(60, 30, 20, .10);
+  --brand: #f0645a; --accent: #c53f33; --tint: #fff1e6; --shadow: rgba(60, 30, 20, .10);
 }
 @media (prefers-color-scheme: dark) {
   :root { --bg: #14121a; --fg: #eeeaf4; --muted: #a59fb2; --line: #2a2733; --card: #1d1a25; --tint: #1d1a25; --shadow: rgba(0, 0, 0, .35); }
 }
 /* Each app page sets its own accent color with a class on <body>. */
-.touchit { --accent: #f0645a; --tint: #fff1e6; }
-.wallpaperheaven { --accent: #7a66e8; --tint: #efeaff; }
+.touchit { --accent: #c53f33; --tint: #fff1e6; }
+.wallpaperheaven { --accent: #6750e5; --tint: #efeaff; }
 @media (prefers-color-scheme: dark) {
   .touchit { --accent: #ff7a6e; --tint: #2a1d1b; }
   .wallpaperheaven { --accent: #a597ff; --tint: #221d36; }
+  /* Invite pages (friend/room/challenge) put white text on the accent; the light dark-mode accent needs dark text. */
+  body .button:not(.secondary) { color: #14121a; }
 }
 
 * { box-sizing: border-box; }
