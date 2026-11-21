@@ -1,49 +1,22 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Join the room</title>
-<meta name="description" content="Join a friend's room in BochoApps' new party game.">
-<!-- The game's name is provisional and it isn't on Google Play yet: keep this page out of search results. -->
-<meta name="robots" content="noindex">
-<link rel="stylesheet" href="../../style.css">
-<style>
- .corazonada { --accent: #b8324a; --tint: #ffe9ec; }
- @media (prefers-color-scheme: dark) { .corazonada { --accent: #ff8fa0; --tint: #2b1b1f; } }
- .code { font: 700 2.2rem/1.2 ui-monospace, "SFMono-Regular", Menlo, monospace; letter-spacing: .15em; margin: 8px 0 20px; }
- .button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
-   padding: 14px 22px; border-radius: 999px; margin: 6px 8px 6px 0; }
- #invalid { display: none; }
-</style>
-</head>
-<body class="corazonada">
-<main>
-<nav><a href="../../">← BochoApps</a></nav>
-<div id="invite">
- <h1>Join the <span>room</span></h1>
- <p class="lead">Each turn one player picks an answer in secret, and everyone else guesses which one. How well do you know your friends?</p>
- <p class="muted">Room code</p>
- <p class="code" id="code"></p>
- <p><a class="button" id="open" href="#">Open in the app</a></p>
- <p class="muted">The game isn't on Google Play yet: ask the host for the test version. If the app is installed, the button above opens the room.</p>
-</div>
-<div id="invalid">
- <h1>This room link isn't valid</h1>
- <p>Scan the host's QR code again, or type the code shown on their screen.</p>
-</div>
-<footer>© 2026 BochoApps</footer>
-</main>
-<script>
- // Room codes are 4 letters without I or O. Anything else is shown as an invalid link, never inserted as HTML.
- const code = (new URLSearchParams(location.search).get("code") || "").toUpperCase();
- if (/^[A-HJ-NP-Z]{4}$/.test(code)) {
-   document.getElementById("code").textContent = code;
-   document.getElementById("open").href = "corazonada://room?code=" + code;
- } else {
-   document.getElementById("invite").style.display = "none";
-   document.getElementById("invalid").style.display = "block";
- }
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- Provisional name, being tested: keep it out of search results. -->
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#FFF4E0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Intuition" />
+    <link rel="manifest" href="/corazonada/manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="/corazonada/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/corazonada/icons/apple-touch-icon.png" />
+    <title>Intuition</title>
+    <script type="module" crossorigin src="/corazonada/assets/index-C7QA_krJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/corazonada/assets/index-gESIITbY.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

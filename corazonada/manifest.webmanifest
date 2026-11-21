@@ -1,0 +1,16 @@
+{
+  "name": "Intuition",
+  "short_name": "Intuition",
+  "description": "How well do you know your friends? A party game for the same room, each on their own phone.",
+  "start_url": "/corazonada/",
+  "scope": "/corazonada/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF4E0",
+  "theme_color": "#FFF4E0",
+  "icons": [
+    { "src": "/corazonada/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/corazonada/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/corazonada/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
