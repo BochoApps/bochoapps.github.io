@@ -15,9 +15,11 @@
 /* Each app page sets its own accent color with a class on <body>. */
 .touchit { --accent: #c53f33; --tint: #fff1e6; }
 .wallpaperheaven { --accent: #6750e5; --tint: #efeaff; }
+.intuition { --accent: #5b3ae8; --tint: #efeaff; }
 @media (prefers-color-scheme: dark) {
   .touchit { --accent: #ff7a6e; --tint: #2a1d1b; }
   .wallpaperheaven { --accent: #a597ff; --tint: #221d36; }
+  .intuition { --accent: #b3a4ff; --tint: #221d36; }
   /* Invite pages (friend/room/challenge) put white text on the accent; the light dark-mode accent needs dark text. */
   body .button:not(.secondary) { color: #14121a; }
 }
@@ -56,6 +58,10 @@ main > .site-header { padding-top: 0; }
 .appcard:hover { transform: translateY(-3px); box-shadow: 0 12px 32px var(--shadow); }
 .appcard .fg { width: 100%; height: auto; display: block; aspect-ratio: 1200 / 627; object-fit: cover; }
 .appcard .body { padding: 18px 20px 22px; display: flex; gap: 14px; align-items: flex-start; }
+/* The featured card spans the row, image beside the text on wide screens. */
+.appcard.featured { grid-column: 1 / -1; flex-direction: row; }
+.appcard.featured .fg { width: 52%; flex: none; aspect-ratio: auto; object-fit: contain; background: #fff4e0; }
+.appcard.featured .body { align-self: center; }
 .appcard .body img { width: 52px; height: 52px; border-radius: 14px; flex: none; }
 .appcard h2 { margin: 0 0 4px; font-size: 1.2rem; }
 .appcard p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.5; }
@@ -96,6 +102,8 @@ footer.split { display: flex; flex-wrap: wrap; justify-content: space-between; g
 
 @media (max-width: 760px) {
   .apps, .features { grid-template-columns: 1fr; }
+  .appcard.featured { flex-direction: column; }
+  .appcard.featured .fg { width: 100%; }
   .hero h1 { font-size: 2.1rem; }
   .apphead { gap: 18px; }
   .apphead > img { width: 84px; height: 84px; border-radius: 22px; }
