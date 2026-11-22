@@ -6,7 +6,7 @@ self.addEventListener("activate", (e) => e.waitUntil(
   caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())))
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url)
-  if (e.request.method !== "GET" || url.origin !== self.location.origin || !url.pathname.startsWith("/corazonada/")) return
+  if (e.request.method !== "GET" || url.origin !== self.location.origin || !url.pathname.startsWith("/intuition/")) return
   const isStatic = /\/(assets|fonts|icons)\//.test(url.pathname)
   if (!isStatic) return // pages: always the network, so a new version shows at once
   e.respondWith(caches.open(CACHE).then(async (cache) => {

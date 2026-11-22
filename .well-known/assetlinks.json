@@ -11,17 +11,5 @@
         "B0:1F:6C:CC:0C:4F:E5:63:0E:00:0C:A9:E6:5F:5B:DB:15:9B:96:3A:EE:CD:C1:E3:8E:52:47:99:08:5E:6E:0F"
       ]
     }
-  },
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.bochoapps.corazonada",
-      "sha256_cert_fingerprints": [
-        "79:BF:AA:70:69:A1:3F:AC:F8:92:99:78:D9:06:96:AF:E1:2F:9C:61:97:DA:49:F0:21:91:38:A0:D2:4D:BE:FD"
-      ]
-    }
   }
 ]
