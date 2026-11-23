@@ -15,11 +15,11 @@
 /* Each app page sets its own accent color with a class on <body>. */
 .touchit { --accent: #c53f33; --tint: #fff1e6; }
 .wallpaperheaven { --accent: #6750e5; --tint: #efeaff; }
-.intuition { --accent: #5b3ae8; --tint: #efeaff; }
+.tantealo { --accent: #5b3ae8; --tint: #efeaff; }
 @media (prefers-color-scheme: dark) {
   .touchit { --accent: #ff7a6e; --tint: #2a1d1b; }
   .wallpaperheaven { --accent: #a597ff; --tint: #221d36; }
-  .intuition { --accent: #b3a4ff; --tint: #221d36; }
+  .tantealo { --accent: #b3a4ff; --tint: #221d36; }
   /* Invite pages (friend/room/challenge) put white text on the accent; the light dark-mode accent needs dark text. */
   body .button:not(.secondary) { color: #14121a; }
 }
