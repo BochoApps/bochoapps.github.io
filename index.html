@@ -3,18 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BochoApps · Small apps for Android, made with care</title>
-<meta name="description" content="BochoApps makes simple, polished apps and games: Intuition, the party guessing game; TouchIT, the one-finger endurance game; and Wallpaper Heaven.">
+<title>BochoApps · Small apps and games, made by one person in Madrid</title>
+<meta name="description" content="BochoApps is a one-person studio in Madrid, named after a cat. Intuition, the party guessing game; TouchIT, the one-finger endurance game; and Wallpaper Heaven.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BochoApps">
-<meta property="og:title" content="BochoApps · Small apps for Android, made with care">
-<meta property="og:description" content="Simple, polished apps and games: Intuition, TouchIT and Wallpaper Heaven.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="BochoApps · Small apps and games, made by one person in Madrid">
+<meta property="og:description" content="Intuition, TouchIT and Wallpaper Heaven: small apps and games, designed, built and supported by one person.">
 <meta property="og:url" content="https://bochoapps.com/">
 <meta property="og:image" content="https://bochoapps.com/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 <meta property="og:image:alt" content="BochoApps: Intuition, TouchIT and Wallpaper Heaven">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://bochoapps.com/">
+<link rel="alternate" hreflang="es" href="https://bochoapps.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://bochoapps.com/">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="touchit/img/icon-180.png">
 <link rel="preload" href="fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -24,21 +29,27 @@
 <main>
 <header class="site-header">
  <a class="wordmark" href="./">Bocho<b>Apps</b></a>
- <nav><a href="#apps">Apps</a><a href="#about">About</a><a href="mailto:support@bochoapps.com">Contact</a></nav>
+ <nav><a href="#apps">Apps</a><a href="mailto:support@bochoapps.com">Contact</a><a class="lang" href="es/" hreflang="es" lang="es">ES</a></nav>
 </header>
 
-<section class="hero">
- <h1>Small apps and games, made with care.</h1>
- <p>BochoApps is a one-person studio in Madrid, named after a cat. I make simple, polished things for Android and the web: fun to pick up, free of clutter, and kind to your privacy.</p>
+<section class="about" id="about">
+ <img class="about-photo" src="img/bocho.webp" alt="Bocho, a black cat, asleep on the sofa" width="210" height="210">
+ <div>
+  <h1>Hi, I'm Bocho.</h1>
+  <p>Well, Bocho is the black cat in the photo. Bocho gave the studio its name and supervises every release, usually from the sofa and usually asleep.</p>
+  <p>The apps are made by Bocho's human, a site reliability engineer in Madrid who keeps large systems running by day and builds small apps and games in the evenings. Every one of them is designed, built and supported by one person, so if you write to support, I'm the one who answers.</p>
+  <p class="about-links"><a href="https://www.linkedin.com/in/jmottosanchez/">Say hi on LinkedIn</a> · <a href="mailto:support@bochoapps.com">support@bochoapps.com</a></p>
+ </div>
 </section>
 
-<section class="apps" id="apps">
+<h2 class="section-title" id="apps">Apps and games</h2>
+<section class="apps">
  <a class="appcard intuition featured" href="intuition/">
   <img class="fg" src="img/intuition-card.jpg" alt="" width="1200" height="627">
   <div class="body">
    <img src="img/intuition-icon.webp" alt="" width="52" height="52">
    <div>
-    <h2>Intuition</h2>
+    <h3>Intuition</h3>
     <p>A party game for 2 to 15 friends in the same room, each on their own phone. One reads a question and secretly picks an answer; everyone else guesses and bets on it. Nothing to install.</p>
     <span class="tag">Party game · Play now in your browser</span>
    </div>
@@ -49,7 +60,7 @@
   <div class="body">
    <img src="touchit/img/icon.webp" alt="" width="52" height="52">
    <div>
-    <h2>TouchIT</h2>
+    <h3>TouchIT</h3>
     <p>Put your finger on the button and don't let go. Play alone, with up to 8 friends on one phone, or against the world on the online leaderboard.</p>
     <span class="tag">Game · On Google Play</span>
    </div>
@@ -60,7 +71,7 @@
   <div class="body">
    <img src="wallpaperheaven/img/icon.webp" alt="" width="52" height="52">
    <div>
-    <h2>Wallpaper Heaven</h2>
+    <h3>Wallpaper Heaven</h3>
     <p>Find wallpapers from Wallhaven, Wikimedia Commons, Openverse, NASA and art museums, see them the way they'll look on your phone, and change your wallpaper on a schedule.</p>
     <span class="tag">Wallpapers · Coming soon to Google Play</span>
    </div>
@@ -69,25 +80,15 @@
 </section>
 
 <section class="values" aria-labelledby="values-title">
- <h2 id="values-title">What every app here promises</h2>
+ <h2 class="section-title" id="values-title">A few promises</h2>
  <div class="value-grid">
-  <div class="value"><span class="value-icon" aria-hidden="true">🤝</span><h3>Fair play</h3><p>No pay-to-win. Leaderboard times are checked by the server's own clock, so records are real.</p></div>
-  <div class="value"><span class="value-icon" aria-hidden="true">🔒</span><h3>Your data stays yours</h3><p>Play and browse without an account. Your settings and history stay on your phone unless you choose to go online.</p></div>
-  <div class="value"><span class="value-icon" aria-hidden="true">🌿</span><h3>Gentle on ads</h3><p>At most a small banner, never in the middle of the fun, and one purchase removes it for good.</p></div>
+  <div class="value"><h3>Fair play</h3><p>No pay-to-win. Leaderboard times are checked by the server's own clock, so records are real.</p></div>
+  <div class="value"><h3>Your data stays yours</h3><p>Play and browse without an account. Your settings and history stay on your phone unless you choose to go online.</p></div>
+  <div class="value"><h3>Easy on ads</h3><p>At most a small banner, never in the middle of the fun, and one purchase removes it for good.</p></div>
  </div>
 </section>
 
-<section class="about" id="about">
- <img class="about-photo" src="img/bocho.webp" alt="Bocho, a black cat, asleep on the sofa" width="210" height="210">
- <div>
-  <h2>Hi, I'm Bocho 🐾</h2>
-  <p>Well, Bocho is the black cat in the photo, and the name behind BochoApps. Bocho supervises every release, usually from the sofa and usually asleep.</p>
-  <p>The typing is done by Bocho's human: a site reliability engineer in Madrid who spends the day keeping large systems running and the evenings building small things people enjoy. Every app here is designed, built and supported by one person, so when you write to support, I'm the one who answers.</p>
-  <p class="about-links"><a href="https://www.linkedin.com/in/jmottosanchez/">Say hi on LinkedIn</a> · <a href="mailto:support@bochoapps.com">support@bochoapps.com</a></p>
- </div>
-</section>
-
-<footer class="split"><span>© 2026 BochoApps</span><a href="mailto:support@bochoapps.com">support@bochoapps.com</a></footer>
+<footer class="split"><span>© 2026 BochoApps · Made by hand in Madrid</span><a href="mailto:support@bochoapps.com">support@bochoapps.com</a></footer>
 </main>
 </body>
 </html>
