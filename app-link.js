@@ -8,6 +8,6 @@
   if (!/Android/i.test(ua) || /;\s*wv\)/i.test(ua)) return
   var play = encodeURIComponent("https://play.google.com/store/apps/details?id=com.bochoapps.tantealo")
   document.getElementById("play-btn").href =
-    "intent://bochoapps.com/tantealo/#Intent;scheme=https;package=com.bochoapps.tantealo;S.browser_fallback_url=" + play + ";end"
+    "intent://bochoapps.com/tantealo/room#Intent;scheme=https;package=com.bochoapps.tantealo;S.browser_fallback_url=" + play + ";end"
   row.hidden = false
 })()
