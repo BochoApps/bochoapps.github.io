@@ -130,3 +130,9 @@ footer.split { display: flex; flex-wrap: wrap; justify-content: space-between; g
   .apphead { flex-direction: column; align-items: flex-start; }
   .site-header nav a { margin-left: 14px; }
 }
+
+/* Android visitors: "Get it on Google Play" under the Tantealo card (shown by app-link.js once the app is live). */
+.play-row { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; margin: -4px 0 4px; }
+.play-row[hidden] { display: none; }
+.playbtn { background: var(--accent); color: #fff; font-weight: 800; padding: 12px 22px; border-radius: 99px; text-decoration: none; }
+.playlink { color: var(--fg); font-weight: 700; text-decoration: underline; }
